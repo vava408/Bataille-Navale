@@ -40,10 +40,15 @@ public class Players
 
 	}
 
-	//ajoute un bateauwx a la list
+	//ajoute un bateaux a la list
 	public void ajouterBateaux(Bateaux bateaux )
 	{
 		this.bateaux.add(bateaux);
+		for (int[] pos : bateaux.getPositions())
+		{
+			plateaux[pos[0]][pos[1]] = 'B';
+		}
+
 	}
 
 
